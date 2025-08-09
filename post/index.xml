@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on 林子皓</title>
+        <link>https://ZihaoLin111.github.io/blog/post/</link>
+        <description>Recent content in Posts on 林子皓</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Zihao Lin</copyright>
+        <lastBuildDate>Fri, 04 Jul 2025 12:56:35 +0800</lastBuildDate><atom:link href="https://ZihaoLin111.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CS61A学习日记</title>
+        <link>https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/</link>
+        <pubDate>Fri, 04 Jul 2025 12:56:35 +0800</pubDate>
+        
+        <guid>https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/</guid>
+        <description>&lt;p&gt;以此博客记录我的CS61A学习过程。由于本人一定程度上仅为计算机初学者，准确来说是还没入学的准大一新生因此本博客以记录个人感想和学习所得为主，故没法像其他博客起到知识传递和解答问题的效果，但我会仅可能记录下自己学习过程中遇到的问题，或许能够帮助到看到这篇博客的人&lt;/p&gt;
+&lt;p&gt;注：本人使用的为Fall2024的课程以及作业
+课程网站:&lt;a class=&#34;link&#34; href=&#34;https://cs61a.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CS61A&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;课程网站(页面备份):&lt;a class=&#34;link&#34; href=&#34;https://insideempire.github.io/CS61A-Website-Archive/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fall2024&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;课程作业:&lt;a class=&#34;link&#34; href=&#34;https://github.com/InsideEmpire/CS61A-Assignments&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CS61A-Assignments&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;课程视频:&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1sy411z7nA/?vd_source=3bc4632ebc321d6858012322cc369765&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Spring2024&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;july-4-2025&#34;&gt;July 4, 2025
+&lt;/h2&gt;&lt;p&gt;准确来说，今天并不是开始学习的第一天，再此之前已经学习了Lecture1和Lecture2的课程，今天在忙完高考志愿填报的事后终于闲了下来，于是便开始以日记的形式记录学习过程。&lt;/p&gt;
+&lt;p&gt;今天听了Lecture3 Control的课程，这段时间学习下来我认为CS61A不同于我以往在中学学习的计算机课程最大的不同是CS61A着重于why，也就是这段代码的实现经历了什么；而中学时的课程更多的是how，教会学生如何实现便点到为止，而为何实现却很少提及，大多考自己理解，而学测也不会考为何实现。&lt;/p&gt;
+&lt;p&gt;CS61A的作业我认为也是课程的亮点之一，刚刚完成了hw01和lab01，承认这两者作为第一天的作业并不是很难，但也绝不是丝毫不要思考的简单题目(我做hw01的时候就因为轻视了题目难度，结果每道题ok的时候都报了错哈哈)&lt;/p&gt;
+&lt;p&gt;记录一道自己在lab01的quiz里面做错的题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q: How do you prevent the ok autograder from interpreting print statements as output?&lt;/p&gt;
+&lt;p&gt;Choose the number of the correct choice:&lt;/p&gt;
+&lt;p&gt;0 ) You don&amp;rsquo;t need to do anything, ok only looks at returned values, not printed values&lt;/p&gt;
+&lt;p&gt;1 ) Print with &amp;lsquo;DEBUG:&amp;rsquo; at the front of the outputted line&lt;/p&gt;
+&lt;p&gt;2 ) Print with # at the front of the outputted line&lt;/p&gt;
+&lt;p&gt;correct answer: 1 )&lt;/p&gt;
+&lt;p&gt;来自ChatGPT的解答：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入输出机制&lt;/p&gt;
+&lt;p&gt;返回值检查： ok autograder 会检查程序的返回值来判断是否正确执行。例如，作业中可能有一个函数 add(a, b)，它应该返回 a + b 的值。评分系统会调用该函数并验证返回值是否与预期一致。&lt;/p&gt;
+&lt;p&gt;打印输出： 默认情况下，ok autograder 会忽略 print 语句的输出，因为它只关心返回值。如果有调试信息打印出来，最好使用特殊前缀（如 DEBUG:）或者注释符号（如 #），以避免误判为程序的正常输出。&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;july-6-2025&#34;&gt;July 6, 2025
+&lt;/h2&gt;&lt;p&gt;昨天听了Lecture 4 Higher-Order Functions然后顺手把hw02做了，后来考虑时间已晚于是就把project hog放在了第二天&lt;/p&gt;
+&lt;p&gt;project hog做了5个多小时，但是在读代码和写代码的过程中感觉自己的理解代码的能力提升了很多；而且完成这个项目，然后成功运行之后感受到了一种前所未有的成就感。我想这两点是CS61A作为UC Berkeley大一课程所能很大程度帮助提升学生能力的地方，阅读高质量的代码十分有益于计算机新手，同时完成项目的成就感能够激励我们继续后面的学习&lt;/p&gt;
+&lt;p&gt;另外值得一提的是hw02中的一些题目中解法为Curring，这是我之前从未见到的，也是我在这个lecture收获最大的，不过这几道题我最初并没能想到Curring的解法于是使用了return一个判断的思路&lt;/p&gt;
+&lt;p&gt;e.g.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;summation_using_accumulate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Returns the sum: term(1) + ... + term(n), using accumulate.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;gt;&amp;gt;&amp;gt; summation_using_accumulate(5, square) # square(1) + square(2) + ... + square(4) + square(5)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    55
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;gt;&amp;gt;&amp;gt; summation_using_accumulate(5, triple) # triple(1) + triple(2) + ... + triple(4) + triple(5)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    45
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;gt;&amp;gt;&amp;gt; # This test checks that the body of the function is just a return statement.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;gt;&amp;gt;&amp;gt; import inspect, ast
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;gt;&amp;gt;&amp;gt; [type(x).__name__ for x in ast.parse(inspect.getsource(summation_using_accumulate)).body[0].body]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    [&amp;#39;Expr&amp;#39;, &amp;#39;Return&amp;#39;]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;summation_using_accumulate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;判断n &amp;gt; 0 可以限制递归的边界，而当判断为False时，就会返回0的值，前一级的结果就会加0。自认为也是一种解决方法&lt;/p&gt;
+&lt;p&gt;当然题干里要求了using accumulate，所以我的答案并不标准合规，下面是标准答案&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;accumulate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fuse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Return the result of fusing together the first n terms in a sequence 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    and start.  The terms to be fused are term(1), term(2), ..., term(n). 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    The function fuse is a two-argument commutative &amp;amp; associative function.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;total&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;total&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fuse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;total&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;total&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;summation_using_accumulate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Returns the sum: term(1) + ... + term(n), using accumulate.&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;accumulate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;后面几天计划出去旅游，学习估计得暂停几天，期间在飞机上路途中打算听一下3b1b的微积分视频，为后面学习MIT18.01/18.02: Calculus做准备&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;july-26-2025&#34;&gt;July 26, 2025
+&lt;/h2&gt;&lt;p&gt;递归好难&lt;/p&gt;
+&lt;h2 id=&#34;july-31-2025&#34;&gt;July 31, 2025
+&lt;/h2&gt;&lt;p&gt;Lecture 11 Sequences, 最简单的一集哈哈&lt;/p&gt;
+&lt;p&gt;Lab03也挺简单的，基本都是关于列表的基础题目， 40min以内就能搞定&lt;/p&gt;
+&lt;p&gt;Lecture 12 Containers 也比较简单，这两节属于为后续打基础的课&lt;/p&gt;
+&lt;h2 id=&#34;august-4-2025&#34;&gt;August 4, 2025
+&lt;/h2&gt;&lt;p&gt;前后历时3终于完成了project cats&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/CS61A_Cats.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1528&#34;
+	srcset=&#34;https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/CS61A_Cats_hu_961d4e1abc438ca.png 480w, https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/CS61A_Cats_hu_52a87acb3e55878a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Cats&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;402px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;其中自认为比较难的一道题是Problem7，题干如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Cats_problem7.png&#34;
+	width=&#34;1716&#34;
+	height=&#34;1320&#34;
+	srcset=&#34;https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Cats_problem7_hu_c39b180d4f1c89b6.png 480w, https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Cats_problem7_hu_744eb04534202a07.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Problem7&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;130&#34;
+		data-flex-basis=&#34;312px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;我的解法及中文注释如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;minimum_mewtations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;typed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;limit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;typed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 如果typed和source相等就终止，也是递归的终止&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;limit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 如果最小步数大于limit就结束，此时最终return的值将是limit + 1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;typed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 同上，递归的终止&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;typed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;typed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 判断第一位是否相同，相同就继续递归，不相同就考虑如下add，remove，substitute三种情况&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;minimum_mewtations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;typed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;limit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;minimum_mewtations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;typed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;limit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 添加一个字符相当于typed不变，source变为从第1位开始&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;remove&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;minimum_mewtations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;typed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;limit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 删去一个字符相当于source不变，typed变为从第1位开始&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;substitute&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;minimum_mewtations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;typed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;limit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 替换一个字符相当于typed和source都不变，于是都变为下一位开始递归&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;substitute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 取最小值&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>创立该博客初衷与关于高考的碎碎念</title>
+        <link>https://ZihaoLin111.github.io/blog/p/%E5%88%9B%E7%AB%8B%E8%AF%A5%E5%8D%9A%E5%AE%A2%E5%88%9D%E8%A1%B7%E4%B8%8E%E5%85%B3%E4%BA%8E%E9%AB%98%E8%80%83%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
+        <pubDate>Thu, 26 Jun 2025 23:25:30 +0800</pubDate>
+        
+        <guid>https://ZihaoLin111.github.io/blog/p/%E5%88%9B%E7%AB%8B%E8%AF%A5%E5%8D%9A%E5%AE%A2%E5%88%9D%E8%A1%B7%E4%B8%8E%E5%85%B3%E4%BA%8E%E9%AB%98%E8%80%83%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
+        <description>&lt;p&gt;正如标题所言，之所以创立这个博客就是想有个地方能让我写一些关于刚刚过去的高考的感想。几天过去，我对于成绩依旧有很多想说的，但不知从何处说起，也不知同谁说。或许写下来是最好的方式。&lt;/p&gt;
+&lt;p&gt;既然不知何处说起，那就从高考成绩本身开始吧&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ZihaoLin111.github.io/blog/p/%E5%88%9B%E7%AB%8B%E8%AF%A5%E5%8D%9A%E5%AE%A2%E5%88%9D%E8%A1%B7%E4%B8%8E%E5%85%B3%E4%BA%8E%E9%AB%98%E8%80%83%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/gaokaoscore.png&#34;
+	width=&#34;952&#34;
+	height=&#34;460&#34;
+	srcset=&#34;https://ZihaoLin111.github.io/blog/p/%E5%88%9B%E7%AB%8B%E8%AF%A5%E5%8D%9A%E5%AE%A2%E5%88%9D%E8%A1%B7%E4%B8%8E%E5%85%B3%E4%BA%8E%E9%AB%98%E8%80%83%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/gaokaoscore_hu_e55ce1836ea3e38b.png 480w, https://ZihaoLin111.github.io/blog/p/%E5%88%9B%E7%AB%8B%E8%AF%A5%E5%8D%9A%E5%AE%A2%E5%88%9D%E8%A1%B7%E4%B8%8E%E5%85%B3%E4%BA%8E%E9%AB%98%E8%80%83%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/gaokaoscore_hu_c2779f5b2cc30725.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;我的高考成绩&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;496px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;查分前几天，我的港中深综评差0.1分没入围（关于综评，后面应该会详细写），当时老师同学都安慰我能去更好的层次的学校，于是查分当晚我一直期盼着自己能考个高分650或660这样的，当然这也不完全是幻想，因为我确实觉得数物化生考的还行，而语文英语也相信高考给分肯定会比平时多。&lt;/p&gt;
+&lt;p&gt;查分时，我本想用书遮住一点点看，但不慎露出的609犹如晴天霹雳使我愣在当场，我想过会考差，因为模考排名一直就那样，但我没想到会如此差。我已不知当时脑子里是什么感受，震惊？懊恼？后悔？不甘？我试图强忍着镇定接受，实际心里却是痛苦。写到这，我不知道该怎么将这种痛苦展现出来，三言两语也说不清，就让后面的内容来一点点体现吧。当横跨几日的万千思绪汇聚在一起时，那便是我这一瞬刻骨铭心的痛苦感受。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;语文  我的语文一直不好，从小学到初中再到高中，题目大抵都能写出来一点，但总是写不全；文言文古诗也常常是看得一知半解；作文那便更是糟糕。（不过中考倒是意想不到地考好了一次，让我来了金中）上高中之后语文一直挺挣扎的，高一高二一直是五六百名徘徊的水平，上了高三之后有所改善，也是到了年级班级均分左右，几次模考虽然不是特别优秀但也至少说的过去，当时高考目标是达到均分就算成功（据说往年学校均分有115）。&lt;/p&gt;
+&lt;p&gt;直到高考&amp;hellip;&amp;hellip;不得不承认今年高考语文是挺难的，记得那天下午四个同学做在一起：同学1：“你觉得语文难吗？”同学2：“废话，你没考吗？”看见我和同学3把耳朵捂住后他们俩也就没再聊了，现在回想起来还是忍不住笑，哈哈。&lt;/p&gt;
+&lt;p&gt;但是写那张卷子期间却是一点也笑不出来，前两个现代文题型很创新，都快把我创死了，问答题是完全不知道在哪找踩分点，只能自己基于文章再天马行空的写答案，不过此时我还不是特别慌，因为向来现代文都写的不算差，千奇百怪的踩分点也不是没想到过。&lt;/p&gt;
+&lt;p&gt;然后来到了文言文，断句不多说，几乎稳定拿分；字词&amp;hellip;不会，文义&amp;hellip;不会，前几年高考和模考的这两道题不是都是能找到明显错误吗？怎么今年的这么抽象！？看了好久选不出来，只好相信直觉，选了顺眼的以免耽误后面的了；翻译&amp;hellip;额，怎么也不会！？两个翻译都只写了一半，后一半完全不会，瞎猜也不知道怎么猜，老师教的、网上看的技巧都用不出来，此时我已经近乎崩溃了，因为几次模考我的翻译都至少能拿个五六分，这次可能三分都是奢望；最后的概括题依旧是没思路，抱着靠改卷老师捞的心态瞎写了点上去。&lt;/p&gt;
+&lt;p&gt;后面的古诗阅读依旧是看不懂加不会，我已不想过多回忆细节，以免加深痛苦。&lt;/p&gt;
+&lt;p&gt;理解性默写？我自认为写的是对的（一直没对答案），这一环节的得分与否我也不是特别在意。因为我确实有很多是不会背的，我不擅长背诵，高三我就不想把太多时间花在背这些东西上，总觉得性价比不高，于是我想出了全新的策略：我靠刷大量的理解性默写题，记住名句、找到题感，后来看到题目脑子里几乎就能瞬间蹦出答案来了。所以说既然没有付出和其他同学相同的精力，那我也就不强求自己这道题拿满分了。&lt;/p&gt;
+&lt;p&gt;语用题我已经记不太清了，好像写的还行？没有考到我不擅长的成语、错别字之类的就已经很开心了。哦对好像有个提纲题纠结了一会，除此之外听说选成语的那道题有点争议，但我也没对过答案，所以就不纠结了。&lt;/p&gt;
+&lt;p&gt;作文嘛，题目确实抽象，不过老师考前给我讲过抗战胜利80周年的题目，个人认为也算是押中了，所以作文大体还是会写的应该没有跑题，但是也仅限大体上，细节上的论点啊、论据啊还是一头雾水。当时抱着相信老师说高考作文给分会比平常高的心态硬着头皮写下去了。现在从结果看嘛，呵呵。&lt;/p&gt;
+&lt;p&gt;出分前一直以为自己就算考不了那么高，至少100到110也是有的，这95分实在是让我震惊。后来还听说了什么压分、两个改卷组一严一松的，唉，只得引用网上的梗感叹——我大抵是被“做局”了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今天就写到这里，本来以为一会就能写完，但写起来发现还有那么多想说的，各科成绩啊、学校选择啊、还有对4班李同学的暗恋&amp;hellip;慢慢写吧，但愿以后还能想起现在的这些所思所想&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数学 哈哈，一直以来最擅长的学科，也是背刺的最大的学科。上高中以来，我就没怎么认真学习过数学，准确来说上高中前就不怎么认真学了，在校内外上上课，完成作业，然后我数学考试就能考的很高，虽然是比不过学校里那些清北华五选手，但和剩下的700多人相比也算的上优秀，每次大考数学基本上是年级前100，有时最后压轴题写的好就是年级前50的水平，周测也曾考过140+，年级前五&lt;/p&gt;
+&lt;p&gt;考数学我有个习惯，就是写的很慢，写完每道题我都会再回看一遍，确保没有出错；然后就是几乎每道题都认真算，不会凭感觉，凭结论直接得出答案；最后是多选题从不猜答案，只选自己坚定的，因为我认为我的成绩不应该依赖于毫无逻辑的“赌博”&lt;/p&gt;
+&lt;p&gt;得益于这个习惯，我每次考试的选填几乎不扣分，这也是我平日里数学好的原因。不过高考的时候却犯了特别大意的失误，一个是向量的选择题，一个是填空题的正负2，还有一个是填空最后一题计算错误。&lt;/p&gt;
+&lt;p&gt;当然这次高考数学期间我的心态却有很大问题，前一个小时的题目都很简单以至于我有信心这次也能135+乃至140。直到19(1)，这道题我一时没有看出来答案，又因为我喜欢把所有东西算出来的习惯，我便开始执着地求导和计算，涉及三角函数的导数题我一直不擅长，所以我便越写越慌，过去了仅20分钟，我还执着于这道小题。此时我决定先写后面的题目，我把19(2)花了一点时间做出来了，然后果断放弃19(3)，现在还剩大约15分钟，我回头继续纠结19(1)，但由于心态的变化已经忘了猜那几个标志性的三角函数值，直到考试快结束才还是猜，甚至还猜错了答案。&lt;/p&gt;
+&lt;p&gt;如果我没有在19(1)上耗费这么多时间，我的心态或许就不会变得那么差，我或许就有足够的时间回去检查前面的题，或许就能够发现我的错误。。。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;英语 至今没有对答案。说实话我觉得今年比往年难，当然也可能是我自己真的水平太差了，反正我的成绩远不如我们学校的平均水平，这一门我真的不知道该说些什么，每次阅读总感觉能读懂但就是写不对&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;物理 这门也没什么好说的，三年来我的物理成绩起起伏伏，记得高一刚入学的时候我物理成绩极好，被老师邀请在班会课上分享学习经验，后来高二时好时坏，高三几次模考都不尽人意，于是花了段时间针对性地刷物理题，最后的结果也算是对的起三年的学习&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;化学生物 最令我诧异也是最drama的两门。这两门我学的一直不好，考好的次数屈指可数。高三下学期的半年里，我的复习策略就是着重于这两门，报名了化学生物的一对一，一直不停刷这两门的试卷，以至于几乎放弃数学的学习，但是每次模考还是考的不好。后来我已经不抱希望了，认为这两门最后肯定是考不好了，结果没想到反而还靠这两门拉分了。我的物化生三门真算是考的很好了，考完那几天我都没见到有人比我高的(清北华五选手除外)，举个极端的例子，我们学校的文科状元的政史地三门也是278分，和我的物化生三门一样高，真的难以理解为何这样的物化生成绩会遇上发挥如此失常的语数外&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今天依旧先写到这，现在志愿填完了，后面应该有更多的闲暇时间用来更新博客了&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;今天是2025年7月18日，好吧我承认我拖延症又犯了，距离上次写已经过去好久。人们说，高考失利就像一场漫长的雨季，前短时间似乎已经缓解，但是潮湿却在今天反扑过来。今天是出录取结果的日子&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Test</title>
+        <link>https://ZihaoLin111.github.io/blog/p/test/</link>
+        <pubDate>Thu, 26 Jun 2025 12:26:16 +0800</pubDate>
+        
+        <guid>https://ZihaoLin111.github.io/blog/p/test/</guid>
+        <description>&lt;h1 id=&#34;test&#34;&gt;Test
+&lt;/h1&gt;&lt;p&gt;Hello World&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

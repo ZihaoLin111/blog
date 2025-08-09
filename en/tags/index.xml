@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Zihao Lin</title>
+        <link>https://ZihaoLin111.github.io/blog/en/tags/</link>
+        <description>Recent content in Tags on Zihao Lin</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Zihao Lin</copyright><atom:link href="https://ZihaoLin111.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>
