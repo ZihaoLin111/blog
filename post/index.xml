@@ -120,7 +120,7 @@
 &lt;p&gt;Lab03也挺简单的，基本都是关于列表的基础题目， 40min以内就能搞定&lt;/p&gt;
 &lt;p&gt;Lecture 12 Containers 也比较简单，这两节属于为后续打基础的课&lt;/p&gt;
 &lt;h2 id=&#34;august-4-2025&#34;&gt;August 4, 2025
-&lt;/h2&gt;&lt;p&gt;前后历时3终于完成了project cats&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;前后历时3天终于完成了project cats&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/CS61A_Cats.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1528&#34;
@@ -185,7 +185,38 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;substitute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 取最小值&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;&lt;h2 id=&#34;september-3-2025&#34;&gt;September 3, 2025
+&lt;/h2&gt;&lt;p&gt;拖了好久终于把Project Ants写好了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Ants1.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1528&#34;
+	srcset=&#34;https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Ants1_hu_791bbaa95dc5a2bd.png 480w, https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Ants1_hu_512b3c82e0df3eb7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Ants1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;402px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Ants2.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1528&#34;
+	srcset=&#34;https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Ants2_hu_b2d2283874c2f7ab.png 480w, https://ZihaoLin111.github.io/blog/p/cs61a%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Ants2_hu_e83b1de0291fed82.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Ants2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;402px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;不得不承认通过完成一个项目能够很大程度提升对面对对象编程的理解&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>创立该博客初衷与关于高考的碎碎念</title>
