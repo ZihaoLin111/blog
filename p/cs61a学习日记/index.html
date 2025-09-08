@@ -330,7 +330,11 @@
     <li><a href="#july-31-2025">July 31, 2025</a></li>
     <li><a href="#august-4-2025">August 4, 2025</a></li>
     <li><a href="#september-3-2025">September 3, 2025</a></li>
-    <li><a href="#september-8-2025">September 8, 2025</a></li>
+    <li><a href="#september-8-2025">September 8, 2025</a>
+      <ol>
+        <li><a href="#lecture23-measuring-efficiency">Lecture23 Measuring Efficiency</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -593,7 +597,121 @@
 <p>不得不承认通过完成一个项目能够很大程度提升对面对对象编程的理解</p>
 <h2 id="september-8-2025">September 8, 2025
 </h2><p>我认为该篇博客不应该尽局限于记录自身学习CS61A的感受，而应当聚焦于记录课程的知识点和题解，以供未来的自己和他人参考学习。故决定从今日起改变博客内容。</p>
-
+<h3 id="lecture23-measuring-efficiency">Lecture23 Measuring Efficiency
+</h3><p>关于如何理解程序运行需要多长时间的问题</p>
+<p>如何计数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">counted</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">counted</span><span class="o">.</span><span class="n">call_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">counted</span><span class="o">.</span><span class="n">call_count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">counted</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;&gt;&gt; fib = count(fib) # 也可以通过decorator的方式实现
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;&gt;&gt; fib(5)
+</span></span></span><span class="line"><span class="cl"><span class="s2">5
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;&gt;&gt; fib.call_count
+</span></span></span><span class="line"><span class="cl"><span class="s2">15
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Memoization</p>
+<p>一种加速程序运行时间的技术， Idea: Remember the results that have been computed before</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">memo</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># Keys are arguments that map to return values</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">memoized</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cache</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cache</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">cache</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">memoized</span> <span class="c1"># Same behavior as f, if f is a pure function</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;&gt;&gt; fib = count(fib)
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;&gt;&gt; counted_fib = fib
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;&gt;&gt; fib = memo(fib)
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;&gt;&gt; fib = count(fib)
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;&gt;&gt; fib(30)
+</span></span></span><span class="line"><span class="cl"><span class="s2">832040
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;&gt;&gt; fib.call_count
+</span></span></span><span class="line"><span class="cl"><span class="s2">59
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;&gt;&gt; counted_fib.call_count
+</span></span></span><span class="line"><span class="cl"><span class="s2">31
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;”
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>$$
+b^n =
+\left\{
+\begin{array}{l}
+1 \qquad\quad\ \ if\ n = 0 \\
+b \cdot b^{n-1} \quad otherwise
+\end{array}
+\right.
+$$$$
+b^n =
+\left\{
+\begin{array}{l}
+1 \qquad\quad\ \ if\ n = 0 \\
+(b^{\frac{1}{2}n})^{2} \quad \ if\ n\ is\ even \\
+b \cdot b^{n-1} \quad if\ n\ is\ odd
+\end{array}
+\right.
+$$
 </section>
 
 
