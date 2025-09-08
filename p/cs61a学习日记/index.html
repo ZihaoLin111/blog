@@ -694,7 +694,9 @@
 </span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;”
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div>$$
+</div><p>两种计算指数的方法
+</p>
+$$
 b^n =
 \left\{
 \begin{array}{l}
@@ -702,7 +704,10 @@ b^n =
 b \cdot b^{n-1} \quad otherwise
 \end{array}
 \right.
-$$$$
+$$<p>
+时间复杂度O(n), 线性时间
+</p>
+$$
 b^n =
 \left\{
 \begin{array}{l}
@@ -711,7 +716,22 @@ b^n =
 b \cdot b^{n-1} \quad if\ n\ is\ odd
 \end{array}
 \right.
-$$
+$$<p>
+时间复杂度O(log n), 对数时间</p>
+<p><strong>常见Order of Growth(时间复杂度)</strong></p>
+<ol>
+<li><strong>Exponential growth(指数).</strong>  E.g. , recursive fib</li>
+<li><strong>Quadratic growth(二次).</strong> E.g. , overlap</li>
+<li><strong>Linear growth(线性).</strong> E.g. , exp</li>
+<li><strong>Logarithmic growth(对数).</strong> E.g. , exp_fast</li>
+<li><strong>Constant growth(常数).</strong> 变量n不影响时间</li>
+</ol>
+<blockquote>
+<p>详细案例参考课程视频</p></blockquote>
+<p><strong>The Consumption of Space(空间复杂度)</strong></p>
+<p>Values and frames in active environments consume memory</p>
+<p>空间复杂度衡量上述所说的执行算法所需的内存大小</p>
+
 </section>
 
 

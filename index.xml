@@ -315,7 +315,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;”
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;$$
+&lt;/div&gt;&lt;p&gt;两种计算指数的方法
+&lt;/p&gt;
+$$
 b^n =
 \left\{
 \begin{array}{l}
@@ -323,7 +325,10 @@ b^n =
 b \cdot b^{n-1} \quad otherwise
 \end{array}
 \right.
-$$$$
+$$&lt;p&gt;
+时间复杂度O(n), 线性时间
+&lt;/p&gt;
+$$
 b^n =
 \left\{
 \begin{array}{l}
@@ -332,7 +337,22 @@ b^n =
 b \cdot b^{n-1} \quad if\ n\ is\ odd
 \end{array}
 \right.
-$$</description>
+$$&lt;p&gt;
+时间复杂度O(log n), 对数时间&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;常见Order of Growth(时间复杂度)&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Exponential growth(指数).&lt;/strong&gt;  E.g. , recursive fib&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quadratic growth(二次).&lt;/strong&gt; E.g. , overlap&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linear growth(线性).&lt;/strong&gt; E.g. , exp&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logarithmic growth(对数).&lt;/strong&gt; E.g. , exp_fast&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Constant growth(常数).&lt;/strong&gt; 变量n不影响时间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;详细案例参考课程视频&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;The Consumption of Space(空间复杂度)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Values and frames in active environments consume memory&lt;/p&gt;
+&lt;p&gt;空间复杂度衡量上述所说的执行算法所需的内存大小&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>创立该博客初衷与关于高考的碎碎念</title>
