@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 在 Windows 下，搭建开发环境一直是一个复杂且困难的问题。由于没有一个统一的标准，导致各种开发环境的安装方式差异巨大，需要付出很多不必要的时间成本。而 Scoop 可以帮助你统一安装并管理常见的开发软件，省去了手动下载安装，配置环境变量等繁琐步骤。\n">
 <title>如何使用Scoop配置c&#43;&#43;</title>
 
 <link rel='canonical' href='https://ZihaoLin111.github.io/blog/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8scoop%E9%85%8D%E7%BD%AEc-/'>
 
 <link rel="stylesheet" href="/blog/scss/style.min.a72fcd7b1eb4bfe95eed2988b4d24c728503cd94e28ace3dbbd7fa2dc6983376.css"><meta property='og:title' content="如何使用Scoop配置c++">
-<meta property='og:description' content="">
+<meta property='og:description' content=" 在 Windows 下，搭建开发环境一直是一个复杂且困难的问题。由于没有一个统一的标准，导致各种开发环境的安装方式差异巨大，需要付出很多不必要的时间成本。而 Scoop 可以帮助你统一安装并管理常见的开发软件，省去了手动下载安装，配置环境变量等繁琐步骤。\n">
 <meta property='og:url' content='https://ZihaoLin111.github.io/blog/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8scoop%E9%85%8D%E7%BD%AEc-/'>
 <meta property='og:site_name' content='林子皓'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-09-14T21:03:39&#43;08:00'/><meta property='article:modified_time' content='2025-09-14T21:03:39&#43;08:00'/>
 <meta name="twitter:title" content="如何使用Scoop配置c++">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content=" 在 Windows 下，搭建开发环境一直是一个复杂且困难的问题。由于没有一个统一的标准，导致各种开发环境的安装方式差异巨大，需要付出很多不必要的时间成本。而 Scoop 可以帮助你统一安装并管理常见的开发软件，省去了手动下载安装，配置环境变量等繁琐步骤。\n">
     <link rel="shortcut icon" href="/blog/static/jlhslogo.png" />
 
     </head>
@@ -302,7 +302,47 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#安装scoop">安装Scoop</a></li>
+    <li><a href="#安装gcccc-编译器">安装GCC（C/C++ 编译器）</a></li>
+    <li><a href="#安装vscode">安装VSCode</a>
+      <ol>
+        <li><a href="#方法一-直接在官网安装">方法一 直接在官网安装</a></li>
+        <li><a href="#方法二-使用scoop安装">方法二 使用Scoop安装</a></li>
+      </ol>
+    </li>
+    <li><a href="#在vscode配置cc-插件">在VSCode配置C/C++ 插件</a></li>
+    <li><a href="#测试">测试</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -351,7 +391,74 @@
     <section class="article-content">
     
     
-    
+    <blockquote>
+<p>在 Windows 下，搭建开发环境一直是一个复杂且困难的问题。由于没有一个统一的标准，导致各种开发环境的安装方式差异巨大，需要付出很多不必要的时间成本。而 Scoop 可以帮助你统一安装并管理常见的开发软件，省去了手动下载安装，配置环境变量等繁琐步骤。</p></blockquote>
+<h2 id="安装scoop">安装Scoop
+</h2><p>打开PowerShell，输入一下指令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Set-ExecutionPolicy</span> <span class="n">-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="c"># 设置PowerShell执行策略</span>
+</span></span><span class="line"><span class="cl"><span class="nb">irm </span><span class="n">get</span><span class="p">.</span><span class="py">scoop</span><span class="p">.</span><span class="py">sh</span> <span class="p">|</span> <span class="nb">iex </span><span class="c"># 安装Scoop</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="安装gcccc-编译器">安装GCC（C/C++ 编译器）
+</h2><p>安装gcc</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">scoop</span> <span class="n">install</span> <span class="n">gcc</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装完成后，可以测试是否安装以及配置成功</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">gcc</span> <span class="p">-</span><span class="n">-version</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果显示版本号，说明已经安装成功</p>
+<h2 id="安装vscode">安装VSCode
+</h2><h3 id="方法一-直接在官网安装">方法一 直接在官网安装
+</h3><blockquote>
+<p>略</p></blockquote>
+<h3 id="方法二-使用scoop安装">方法二 使用Scoop安装
+</h3><p>如果你通过方法一安装请忽略这一步骤</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">scoop install vscode
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="在vscode配置cc-插件">在VSCode配置C/C++ 插件
+</h2><ol>
+<li>点击扩展(Extensions) $ \rightarrow $ 搜索C/C++ $ \rightarrow $ 安装插件</li>
+<li>打开命令面板(Ctrl+Shift+P): 搜索 <strong>C/C++: Edit Configurations (UI)</strong>  或 <strong>C/C++: Edit Configurations (JSON)</strong></li>
+<li>设置**&ldquo;compilerPath&rdquo;**为你的GCC路径，例如</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;compilerPath&#34;</span><span class="err">:</span> <span class="s2">&#34;C:/Users/你的用户名/scoop/apps/gcc/current/bin/g++.exe&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="测试">测试
+</h2><blockquote>
+<p>补充，如何使用Scoop<a class="link" href="https://github.com/ScoopInstaller/Scoop"  target="_blank" rel="noopener"
+    >官方文档</a>和<a class="link" href="https://github.com/ScoopInstaller/Scoop/wiki/Quick-Start"  target="_blank" rel="noopener"
+    >快速入门</a></p></blockquote>
+
 </section>
 
 
