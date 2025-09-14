@@ -16,7 +16,7 @@
         <description>&lt;blockquote&gt;
 &lt;p&gt;在 Windows 下，搭建开发环境一直是一个复杂且困难的问题。由于没有一个统一的标准，导致各种开发环境的安装方式差异巨大，需要付出很多不必要的时间成本。而 Scoop 可以帮助你统一安装并管理常见的开发软件，省去了手动下载安装，配置环境变量等繁琐步骤。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;安装scoop&#34;&gt;安装Scoop
-&lt;/h2&gt;&lt;p&gt;打开PowerShell，输入一下指令&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;打开PowerShell，输入以下指令&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -27,7 +27,21 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;irm &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;scoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;sh&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;iex &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 安装Scoop&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;安装gcccc-编译器&#34;&gt;安装GCC（C/C++ 编译器）
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://ZihaoLin111.github.io/blog/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8scoop%E9%85%8D%E7%BD%AEc-/powershell.png&#34;
+	width=&#34;1734&#34;
+	height=&#34;927&#34;
+	srcset=&#34;https://ZihaoLin111.github.io/blog/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8scoop%E9%85%8D%E7%BD%AEc-/powershell_hu_a91c65c10a11ded5.png 480w, https://ZihaoLin111.github.io/blog/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8scoop%E9%85%8D%E7%BD%AEc-/powershell_hu_83ecd08fb9b4ce27.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;安装Scoop&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;448px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装gcccc-编译器&#34;&gt;安装GCC（C/C++ 编译器）
 &lt;/h2&gt;&lt;p&gt;安装gcc&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
